@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sister's Guide - Asthetique Studio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[#FAF9F6] text-stone-800 selection:bg-rose-200">
+
+    <!-- 📖 PAGE 1: COVER -->
+    <header class="relative w-full max-w-md mx-auto pt-24 pb-20 px-6 text-center flex flex-col items-center justify-center bg-gradient-to-b from-rose-50/50 to-[#FAF9F6]">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-64 h-64 bg-rose-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+            <div class="absolute top-[20%] right-[-10%] w-72 h-72 bg-orange-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-light tracking-tight text-stone-900 mb-4">
+            <span class="font-serif italic mr-2">Sister's</span>day
+        </h1>
+        <p class="text-sm tracking-widest uppercase text-stone-500 mb-8 border-b border-stone-300 pb-4 inline-block">
+            Asthetique Studio
+        </p>
+        <div class="bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-white/80 shadow-sm mt-4">
+            <p class="text-stone-600 text-sm font-medium flex items-center gap-2">
+                <i data-lucide="heart" class="w-4 h-4 text-rose-400" fill="currentColor"></i>
+                Your Safe Zone for Glowing Skin
+            </p>
+        </div>
+    </header>
+
+    <!-- NAVIGATION TABS -->
+    <div class="max-w-md mx-auto px-4 mb-8 sticky top-4 z-50">
+        <div class="flex flex-wrap justify-center gap-2 p-2 bg-white/90 backdrop-blur-md rounded-2xl shadow-sm border border-stone-100" id="tab-container">
+            <button onclick="switchTab('all')" id="tab-btn-all" class="tab-btn px-4 py-2 text-[11px] font-medium rounded-full whitespace-nowrap transition-all bg-stone-800 text-white shadow-md">ALL</button>
+            <button onclick="switchTab('core')" id="tab-btn-core" class="tab-btn px-4 py-2 text-[11px] font-medium rounded-full whitespace-nowrap transition-all text-stone-500 hover:text-stone-800 hover:bg-stone-100">CORE TREATMENTS</button>
+            <button onclick="switchTab('extraction')" id="tab-btn-extraction" class="tab-btn px-4 py-2 text-[11px] font-medium rounded-full whitespace-nowrap transition-all text-stone-500 hover:text-stone-800 hover:bg-stone-100">EXTRACTION</button>
+            <button onclick="switchTab('massage')" id="tab-btn-massage" class="tab-btn px-4 py-2 text-[11px] font-medium rounded-full whitespace-nowrap transition-all text-stone-500 hover:text-stone-800 hover:bg-stone-100">MASSAGE</button>
+            <button onclick="switchTab('mask')" id="tab-btn-mask" class="tab-btn px-4 py-2 text-[11px] font-medium rounded-full whitespace-nowrap transition-all text-stone-500 hover:text-stone-800 hover:bg-stone-100">MASK BAR</button>
+        </div>
+    </div>
+
+    <main class="max-w-md mx-auto px-4 pb-24 space-y-12" id="main-content">
+
+        <!-- 📖 01 / CORE TREATMENTS -->
+        <section id="section-core" class="tab-section space-y-6 animate-fade-in pt-2">
+            <div class="text-center mb-6">
+                <span class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-2 block">01 / Category</span>
+                <h2 class="text-2xl font-serif text-stone-800 flex items-center justify-center gap-2">
+                    <i data-lucide="droplets" class="w-5 h-5 text-rose-400"></i> Core Treatments
+                </h2>
+            </div>
+
+            <!-- Acne Clear -->
+            <div class="bg-white rounded-[2rem] p-6 shadow-sm border border-stone-100">
+                <img src="acne-clear.png" alt="Acne Clear" class="w-full h-40 object-cover object-center rounded-xl mb-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-lg font-medium text-stone-900">Acne Clear</h3>
+                    <span class="bg-stone-800 text-white text-sm font-semibold px-3 py-1 rounded-full">฿799</span>
+                </div>
+                <p class="text-stone-400 text-xs mb-3 font-medium">เคลียร์สิวถอนรากถอนโคน</p>
+                <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                    สิวบุกหนักแค่ไหนก็ไม่ต้องแพนิก! คอร์สนี้คือการประกาศสงครามกับสิวแบบครบจบใน 6 สเต็ป ซิสจัดเต็มให้ตั้งแต่กดสิว ดับความร้อนด้วยเครื่อง Cryo ระบบเย็น ฉายแสงฆ่าเชื้อแบคทีเรีย และปิดท้ายด้วยมาสก์ปลอบผิว รับรองว่าสิวแห้งไว หน้ากลับมาเรียบกริบแบบบึ้มมาก วงจรสิวต้องยอมแพ้ให้ความทำถึงของคอร์สนี้ค่ะ
+                </p>
+                <div class="bg-stone-50 rounded-xl p-3 border border-stone-100">
+                    <p class="text-[10px] font-bold tracking-wider text-rose-400 uppercase mb-1">Key Ingredient</p>
+                    <p class="text-xs text-stone-600"><span class="font-medium">Aloe Vera Serum</span> — เจลว่านหางจระเข้ดับไฟสิวอักเสบ + Cica & Tea Tree Mask เสกผิวอักเสบให้สงบลงแบบปังๆ</p>
+                </div>
+            </div>
+
+            <!-- Glass Skin -->
+            <div class="bg-gradient-to-br from-white to-orange-50/30 rounded-[2rem] p-6 shadow-sm border border-orange-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-orange-100 text-orange-700 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">Best Seller</div>
+                <img src="glass-skin.png" alt="Glass Skin" class="w-full h-40 object-cover object-center rounded-xl mb-4 mt-2">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-lg font-medium text-stone-900">Glass Skin</h3>
+                    <span class="bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full">฿799</span>
+                </div>
+                <p class="text-stone-500 text-xs mb-3 font-medium">เสกผิวกระจกโกลว์ฉ่ำ</p>
+                <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                    อยากมีผิวเล่นแสงเหมือนดื่มน้ำวันละ 3 ลิตรต้องจัดโปรแกรมนี้เลยค่ะน้องๆ ซิสจะเสกหน้าหมองคล้ำจากการเรียนหนักให้กลับมาโกลว์ใสฟีลลูกคุณแบบจึ้งๆ ด้วยเครื่องระบบเย็นที่ช่วยผลักวิตามินให้ซึมลึก ผิวเด้งอิ่มฟูทันทีหลังทำ ถ่ายรูปเปิดแฟลชปุ๊บคือผิวสวยพุ่งทะลุกล้องแบบของแทร่แน่นอน
+                </p>
+                <div class="bg-white/60 rounded-xl p-3 border border-orange-100">
+                    <p class="text-[10px] font-bold tracking-wider text-orange-500 uppercase mb-1">Key Ingredient</p>
+                    <p class="text-xs text-stone-600"><span class="font-medium">Vitamin Snow White</span> — บูสต์ผิวให้สว่างมีออร่า + Pure Gold Mask มาสก์ทองคำสุดหรูให้ผิวดูแพงแบบตะโกน</p>
+                </div>
+            </div>
+
+            <!-- Sensitive & Hydration -->
+            <div class="bg-gradient-to-br from-white to-rose-50/40 rounded-[2rem] p-6 shadow-sm border border-rose-100 relative overflow-hidden">
+                <img src="sensitive-hydration.png" alt="Sensitive & Hydration" class="w-full h-40 object-cover object-center rounded-xl mb-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-lg font-medium text-stone-900 pr-2">Sensitive & Hydration</h3>
+                    <span class="bg-rose-100 text-rose-800 text-sm font-semibold px-3 py-1 rounded-full shrink-0">฿799</span>
+                </div>
+                <p class="text-stone-500 text-xs mb-3 font-medium">เติมน้ำผิวแพ้ง่าย</p>
+                <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                    ผิวอ่อนแอแพ้ง่ายต้องมาเซฟโซนของซิส โอ๋ผิวบอบบางโดยเฉพาะ เติมน้ำให้ผิวแห้งกลับมาชุ่มชื้นบึ้มมาก ลดอาการแดงลอก ให้ผิวกลับมาแข็งแรงปังๆ
+                </p>
+                <div class="bg-white/60 rounded-xl p-3 border border-rose-100">
+                    <p class="text-[10px] font-bold tracking-wider text-rose-500 uppercase mb-1">Key Ingredient</p>
+                    <p class="text-xs text-stone-600"><span class="font-medium">Marine Collagen + Bulgarian Rose Mask</span> — คอลลาเจนอัดแน่นอุ้มน้ำ พลังกุหลาบลดระคายเคืองอ่อนโยนสุดๆ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📖 02 / ACNE EXTRACTION -->
+        <section id="section-extraction" class="tab-section space-y-6 animate-fade-in pt-6">
+            <div class="text-center mb-6">
+                <span class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-2 block">02 / Category</span>
+                <h2 class="text-2xl font-serif text-stone-800 flex items-center justify-center gap-2">
+                    <i data-lucide="sparkles" class="w-5 h-5 text-rose-400"></i> Acne Extraction
+                </h2>
+            </div>
+
+            <div class="bg-white rounded-[2rem] p-6 shadow-sm border border-stone-100">
+                <img src="acne-extraction.png" alt="Acne Extraction" class="w-full h-40 object-cover object-center rounded-xl mb-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-lg font-medium text-stone-900">Acne Extraction</h3>
+                    <span class="bg-stone-100 text-stone-800 text-sm font-semibold px-3 py-1 rounded-full">฿299</span>
+                </div>
+                <p class="text-stone-400 text-xs mb-3 font-medium">กดสิวเคลียร์ผิว</p>
+                <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                    ใครแอบบีบสิวเองแล้วหน้าพังจนนอยด์ ทิ้งไม้กดสิวแล้วแวะมาหาซิสด่วนค่ะ! ทรีตเมนต์นี้ซิสจะขออาสาเคลียร์สิวอุดตันกวนใจให้หลุดออกไปแบบช็อตฟีล รับประกันความมือเบาหวิวเหมือนปุยเมฆ เก็บให้ละเอียดทุกเม็ดแบบทำถึง ไม่ต้องกลัวหน้าช้ำหรือหน้าบวมแดงหลังทำ แต่งหน้าไปเดตต่อได้เลยของแทร่
+                </p>
+                <div class="bg-stone-50 rounded-xl p-3 border border-stone-100">
+                    <p class="text-[10px] font-bold tracking-wider text-stone-400 uppercase mb-1">Key Ingredient</p>
+                    <p class="text-xs text-stone-600"><span class="font-medium">Cream Milk Cleansing</span> — คลีนซิ่งน้ำนมนุ่มฟู ทำความสะอาดผิวแบบทะนุถนอมสุดๆ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📖 03 / FACE MASSAGE -->
+        <section id="section-massage" class="tab-section space-y-6 animate-fade-in pt-6">
+            <div class="text-center mb-6">
+                <span class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-2 block">03 / Category</span>
+                <h2 class="text-2xl font-serif text-stone-800 flex items-center justify-center gap-2">
+                    <i data-lucide="moon" class="w-5 h-5 text-rose-400"></i> Face Massage
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Sleep Mode -->
+                <div class="bg-white rounded-[2rem] p-6 shadow-sm border border-stone-100">
+                    <img src="sleep-mode.png" alt="Sleep Mode" class="w-full h-40 object-cover object-center rounded-xl mb-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-medium text-stone-900">Sleep Mode</h3>
+                        <span class="text-rose-400 font-semibold text-sm bg-rose-50 px-3 py-1 rounded-full">฿399</span>
+                    </div>
+                    <p class="text-stone-400 text-xs mb-3 font-medium">นวดพักนอยด์</p>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        ปั่นโปรเจกต์ดึกจนตาคล้ำเป็นแพนด้า เครียดจนหน้าตึงไปหมด? หลับตาพริ้มให้ซิสนวดคลายตึง ใช้แท่งเย็นช็อตฟีลความเหนื่อย ตื่นมาตาหายบวม หน้าเฟรชเหมือนนอนครบ 8 ชั่วโมง
+                    </p>
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-100">
+                        <p class="text-[10px] font-bold tracking-wider text-stone-400 uppercase mb-1">Key Ingredient</p>
+                        <p class="text-xs text-stone-600"><span class="font-medium">Ice Globes (แท่งเย็นช็อตฟีล)</span> — ประคบลดตาบวมน้ำและกระชับรูขุมขน</p>
+                    </div>
+                </div>
+
+                <!-- Cloud Massage -->
+                <div class="bg-white rounded-[2rem] p-6 shadow-sm border border-stone-100">
+                    <img src="cloud-massage.png" alt="Cloud Massage" class="w-full h-40 object-cover object-center rounded-xl mb-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-medium text-stone-900">Cloud Massage</h3>
+                        <span class="text-rose-400 font-semibold text-sm bg-rose-50 px-3 py-1 rounded-full">฿499</span>
+                    </div>
+                    <p class="text-stone-400 text-xs mb-3 font-medium">นวดหน้าเสกหน้าเรียว</p>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        ตื่นมาหน้าบวมน้ำ อยากกรอบหน้าชัดเป๊ะก่อนออกเดต ต้องแอดออนตัวนี้! เดรนน้ำเหลืองคู่หินกัวซารีดกรอบหน้ายกกระชับทำถึง รู้สึกเหมือนลอยบนปุยเมฆ หน้าวีเชปฟีลลูกคุณ
+                    </p>
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-100">
+                        <p class="text-[10px] font-bold tracking-wider text-stone-400 uppercase mb-1">Key Ingredient</p>
+                        <p class="text-xs text-stone-600"><span class="font-medium">Gua Sha (หินกัวซา)</span> — อุปกรณ์นวดจากหินธรรมชาติ เสกกรอบหน้าให้เป๊ะปัง</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📖 04 / MASK BAR -->
+        <section id="section-mask" class="tab-section space-y-6 animate-fade-in pt-6">
+            <div class="text-center mb-6">
+                <span class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-2 block">04 / Category</span>
+                <h2 class="text-2xl font-serif text-stone-800 flex items-center justify-center gap-2">
+                    <i data-lucide="star" class="w-5 h-5 text-orange-400 fill-orange-100"></i> Mask Bar
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Cica Clear -->
+                <div class="bg-white rounded-[2rem] p-6 shadow-sm border border-stone-100">
+                    <img src="cica-clear.png" alt="Cica Clear" class="w-full h-40 object-cover object-center rounded-xl mb-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-medium text-stone-900">Cica Clear</h3>
+                        <span class="bg-stone-100 text-stone-800 text-sm font-semibold px-3 py-1 rounded-full">฿159</span>
+                    </div>
+                    <p class="text-stone-400 text-xs mb-3 font-medium">มาสก์ใบบัวบกสยบนอยด์สิว</p>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        มาสก์เซฟผิวจากสิวเห่อ! ใครสิวอักเสบบุกจนนอยด์ มาสก์ใบบัวบกตัวนี้เลย ดับไฟสิวให้สงบไวมาก สมานรอยแดงให้จาง กู้หน้าพังให้กลับมาปัง
+                    </p>
+                    <div class="bg-stone-50 rounded-xl p-3 border border-stone-100">
+                        <p class="text-[10px] font-bold tracking-wider text-green-600 uppercase mb-1">Key Ingredient</p>
+                        <p class="text-xs text-stone-600">มาส์กใบบัวบก</p>
+                    </div>
+                </div>
+
+                <!-- 24K Glow -->
+                <div class="bg-gradient-to-br from-white to-orange-50/20 rounded-[2rem] p-6 shadow-sm border border-orange-100">
+                    <img src="24k-glow.png" alt="24K Glow" class="w-full h-40 object-cover object-center rounded-xl mb-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-medium text-stone-900">24K Glow</h3>
+                        <span class="bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full">฿159</span>
+                    </div>
+                    <p class="text-stone-400 text-xs mb-3 font-medium">มาสก์ทองคำหน้าจึ้ง</p>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        อยากมีออร่า! อัปเกรดความลูกคุณด้วยมาสก์ทองคำบริสุทธิ์ กู้หน้าหมองให้กลับมาสว่างเปล่งประกายสุดๆ ใครเห็นต้องทักว่าทำไมผิวสวยดูแพงเบอร์นี้
+                    </p>
+                    <div class="bg-white/60 rounded-xl p-3 border border-orange-100">
+                        <p class="text-[10px] font-bold tracking-wider text-orange-500 uppercase mb-1">Key Ingredient</p>
+                        <p class="text-xs text-stone-600">มาส์กทองคำ</p>
+                    </div>
+                </div>
+
+                <!-- Rose Dew -->
+                <div class="bg-gradient-to-br from-white to-rose-50/20 rounded-[2rem] p-6 shadow-sm border border-rose-100">
+                    <img src="rose-dew.png" alt="Rose Dew" class="w-full h-40 object-cover object-center rounded-xl mb-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-medium text-stone-900">Rose Dew</h3>
+                        <span class="bg-rose-100 text-rose-800 text-sm font-semibold px-3 py-1 rounded-full">฿159</span>
+                    </div>
+                    <p class="text-stone-400 text-xs mb-3 font-medium">มาสก์ฉ่ำของแทร่</p>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        มาสก์เพื่อผิวหิวน้ำ! สกัดจากกุหลาบเน้นๆ กลิ่นหอมฟินผ่อนคลาย ล็อคความชุ่มชื้นให้ผิวแห้งกร้านกลับมานุ่มเด้งดึ๋ง จับแล้วหน้านุ่มจนใจเจ็บ
+                    </p>
+                    <div class="bg-white/60 rounded-xl p-3 border border-rose-100">
+                        <p class="text-[10px] font-bold tracking-wider text-rose-500 uppercase mb-1">Key Ingredient</p>
+                        <p class="text-xs text-stone-600">มาส์กกุหลาบ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-300 pt-16 pb-12 px-6 rounded-t-[3rem] mt-8 text-center max-w-md mx-auto relative overflow-hidden">
+        <div class="absolute top-[-50%] left-[-20%] w-64 h-64 bg-stone-800 rounded-full mix-blend-screen filter blur-3xl opacity-50 pointer-events-none"></div>
+
+        <h2 class="text-2xl font-serif text-white mb-2 relative z-10">แวะมาให้ซิสดูแลได้เลยนะ ✨</h2>
+        <p class="text-sm text-stone-400 mb-8 relative z-10">ดูแลฟีลพี่สาว — Sister's day 🤍</p>
+
+        <div class="space-y-4 max-w-xs mx-auto relative z-10">
+            <!-- LINE -->
+            <a href="https://lin.ee/u35wA3t" target="_blank" class="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 transition-colors p-3 rounded-xl backdrop-blur-sm">
+                <img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0">
+            </a>
+            <!-- โทร -->
+            <a href="tel:+66646542354" class="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 transition-colors p-3 rounded-xl backdrop-blur-sm">
+                <i data-lucide="phone" class="w-5 h-5 text-stone-300"></i>
+                <span class="text-sm font-medium">064 654 2354</span>
+            </a>
+            <!-- ที่อยู่ -->
+            <a href="https://share.google/urSH7DLchX0V0KFH6" target="_blank" class="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 transition-colors p-3 rounded-xl backdrop-blur-sm">
+                <i data-lucide="map-pin" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                <span class="text-xs text-left">หอพัก BBS, 52 ถนน เอกทักษิณ ต.หลักหก, อ.เมือง, Pathum Thani 12000</span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function switchTab(tabId) {
+            const allBtns = document.querySelectorAll('.tab-btn');
+            allBtns.forEach(btn => {
+                btn.className = 'tab-btn px-4 py-2 text-[11px] font-medium rounded-full whitespace-nowrap transition-all text-stone-500 hover:text-stone-800 hover:bg-stone-100';
+            });
+
+            const activeBtn = document.getElementById('tab-btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.className = 'tab-btn px-4 py-2 text-[11px] font-medium rounded-full whitespace-nowrap transition-all bg-stone-800 text-white shadow-md';
+            }
+
+            const allSections = document.querySelectorAll('.tab-section');
+            allSections.forEach(section => {
+                if (tabId === 'all') {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = section.id === 'section-' + tabId ? 'block' : 'none';
+                }
+            });
+        }
+
+        switchTab('all');
+    </script>
+</body>
+</html>
